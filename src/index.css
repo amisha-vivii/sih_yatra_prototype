@@ -1,0 +1,56 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  --ys-ink: #1b1712;
+  --ys-canvas: #f7f3ec;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  background-color: var(--ys-canvas);
+  color: var(--ys-ink);
+  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+*:focus-visible {
+  outline: 2px solid #b4531f;
+  outline-offset: 2px;
+}
+.ys-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.ys-scroll::-webkit-scrollbar-thumb {
+  background: #d8cdbd;
+  border-radius: 999px;
+}
+/* Leaflet surface tuning so the map reads as part of the product, not an embed */
+.leaflet-container {
+  font-family: 'Manrope', sans-serif;
+  background: #e9e2d6;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  box-shadow: 0 12px 32px -12px rgba(27, 23, 18, 0.45);
+}
+.leaflet-popup-content {
+  margin: 12px 14px;
+}
+.ys-marker {
+  border-radius: 999px;
+  border: 2px solid #fffdf9;
+  box-shadow: 0 4px 10px -2px rgba(27, 23, 18, 0.5);
+}
